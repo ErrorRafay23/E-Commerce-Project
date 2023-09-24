@@ -1,0 +1,623 @@
+﻿@model IEnumerable<E_Commerce_Project.Models.Product>
+
+
+@{
+    ViewData["Title"] = "Main Page";
+}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!--- google fonts Link ---->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!---- icon cdn link---->
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<!--- owl carsoul ---->
+
+
+
+<section>
+
+    <div class="brands">
+        <div class="carousel owl-carousel">
+            <div class="card card-1">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/client-logo-5.png">
+            </div>
+            <div class="card card-2">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-2.png">
+            </div>
+            <div class="card card-3">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-3.png">
+            </div>
+            <div class="card card-4">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png">
+            </div>
+            <div class="card card-5">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/client-logo-5.png">
+            </div>
+            <div class="card card-6">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/client-logo-5.png">
+            </div>
+        </div>
+    </div>
+    <!--- brands logo ---->
+
+
+    <div class="discount">
+
+        <div class="discount-box">
+            <h3>20% Off On Tank Tops</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum.</p>
+            <button>shop now</button>
+        </div>
+
+        <div class="discount-box">
+            <h3>Latest Eyewear For You</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum.​</p>
+            <button>shop now</button>
+        </div>
+
+        <div class="discount-box">
+            <h3>Let's Lorem Suit Up!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum.</p>
+            <button>check out</button>
+        </div>
+
+    </div>
+    <!---discount ----->
+
+
+    <div class="featured-Products">
+
+        <h2>Featured Products</h2>
+
+
+        @foreach (var item in Model)
+        {
+            <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-400x400.jpg" class="product-photo">
+
+                @*<i class="fa fa-shopping-basket basket add-to-cart" data-id="@item.ProductId"></i>*@
+
+
+                <a class="add-to-cart" data-id="@item.ProductId"> <i class="fa fa-shopping-basket basket"></i></a>
+
+                <p class="sale">Sale!</p>
+
+                <div class="product-content">
+                    <p class="name">
+                        @item.ProductName
+                    </p>
+                    <p class="category">
+                        @item.ProductCategory
+                    </p>
+                    <p class="price">
+                        <span>&#36;150.00</span>
+                        &#36;  @item.ProductPrice
+                    </p>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+        }
+
+
+
+
+       <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-400x400.jpg" class="product-photo">
+
+                <i class="fa fa-shopping-basket basket"></i>
+
+                <p class="sale">Sale!</p>
+
+                <div class="product-content">
+                    <p class="name">
+                        DNK Yellow Shoes
+                    </p>
+                    <p class="category">
+                        Men
+                    </p>
+                    <p class="price">
+                        <span>&#36;150.00</span>
+                        &#36;120.00
+                    </p>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe1-400x400.jpg" id="sheochange">
+
+                <i class="fa fa-shopping-basket basket"></i>
+
+                <div class="product-content">
+                    <p class="name">
+                        DNK Blue Shoes
+                    </p>
+                    <p class="category">
+                        Men
+                    </p>
+                    <p class="price">
+                        &#36;200.00
+                    </p>
+                    <div class="colors-option">
+                        <span class="sheos sheoActive" onclick="sheoColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe1-400x400.jpg','0')"></span>
+                        <span class="sheos" onclick="sheoColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/sports-shoe4-300x300.jpg','1')"></span>
+                        <span class="sheos" onclick="sheoColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe2-300x300.jpg','2')"></span>
+                    </div>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans1-400x400.jpg">
+
+                <i class="fa fa-shopping-basket basket"></i>
+
+                <div class="product-content">
+                    <p class="name">
+                        Dark Brown Jeans
+                    </p>
+                    <p class="category">
+                        Men
+                    </p>
+                    <p class="price">
+                        &#36;150.00
+                    </p>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans2-400x400.jpg">
+
+                <i class="fa fa-shopping-basket basket"></i>
+
+                <div class="product-content">
+                    <p class="name">
+                        Blue Denim Jeans
+                    </p>
+                    <p class="category">
+                        Women
+                    </p>
+                    <p class="price">
+                        &#36;150.00
+                    </p>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans1-400x400.jpg" class="product-photo">
+
+                <i class="fa fa-shopping-basket basket"></i>
+
+                <p class="sale">Sale!</p>
+
+                <div class="product-content">
+                    <p class="name">
+                        Blue Denim Shorts
+                    </p>
+                    <p class="category">
+                        Women
+                    </p>
+                    <p class="price">
+                        <span>&#36;150.00</span>
+                        &#36;130.00
+                    </p>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory1-300x300.jpg" id="bracelet">
+
+                <i class="fa fa-shopping-basket basket"></i>
+
+                <div class="product-content">
+                    <p class="name">
+                        Boho Bangle Bracelet
+                    </p>
+                    <p class="category">
+                        Accessories
+                    </p>
+                    <p class="price">
+                        &#36;150.00
+                    </p>
+                    <div class="colors-option">
+                        <span class="bracelets braceletActive" style="background:#03C2DC;" onclick="braceletColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory1-300x300.jpg','0')"></span>
+                        <span class="bracelets" onclick="braceletColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/product-accessory1-c-300x300.jpg','1')"></span>
+                        <span class="bracelets" style="background:#DC5C03;" onclick="braceletColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/product-accessory1-b-300x300.jpg','2')"></span>
+                    </div>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/product-bag3-c-300x300.jpg" id="bag">
+
+                <i class="fa fa-shopping-basket basket"></i>
+
+                <div class="product-content">
+                    <p class="name">
+                        Bright Red Bag
+                    </p>
+                    <p class="category">
+                        Accessories
+                    </p>
+                    <p class="price">
+                        &#36;100.00 – &#36;140.00
+                    </p>
+                    <div class="colors-option">
+                        <span class="bag bagActive" onclick="bagColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/product-bag3-c-300x300.jpg','0')"></span>
+                        <span class="bag" style="background:#DC5C03;" onclick="bagColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/product-bag3-d-300x300.jpg','1')"></span>
+                        <span class="bag" style="background:#D103BE;" onclick="bagColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/product-bag3-b-300x300.jpg','2')"></span>
+                        <span class="bag" style="background:#D11C03;" onclick="bagColorChange('https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag3-300x300.jpg','3')"></span>
+                    </div>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag1-400x400.jpg">
+
+                <i class="fa fa-shopping-basket basket"></i>
+
+                <div class="product-content">
+                    <p class="name">
+                        Light Brown Purse
+                    </p>
+                    <p class="category">
+                        Accessories
+                    </p>
+                    <p class="price">
+                        &#36;150.00
+                    </p>
+                    <p class="stars">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </p>
+                </div>
+            </div>
+
+    </div>
+    <!---featured products ----->
+
+
+    <div class="limited-Offer">
+        <div class="offer-content">
+            <div class="content-box">
+                <p class="offer">
+                    Limited Time Offer
+                </p>
+                <h3>
+                    Special Edition
+                </h3>
+                <p class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                </p>
+                <p class="offer">
+                    Buy This T-shirt At 20% Discount, Use Code OFF20
+                </p>
+                <button>shop now</button>
+            </div>
+        </div>
+    </div>
+    <!---- limited offer---->
+
+
+    <div class="info">
+
+        <div class="info-section">
+            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png">
+
+            <h3>Worldwide Shipping</h3>
+            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+
+        </div>
+        <div class="info-section">
+            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/quality-free-img.png">
+
+            <h3>Best Quality</h3>
+            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+
+        </div>
+        <div class="info-section">
+            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/tag-free-img.png">
+
+            <h3>Best Offers</h3>
+            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+
+        </div>
+        <div class="info-section">
+            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/lock-free-img.png">
+
+            <h3>Secure Payments</h3>
+            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+
+        </div>
+
+    </div>
+    <!---- info ---->
+
+</section>
+
+
+
+@*<ul>
+        @foreach (var product in Model)
+        {
+            <li>
+                @product.ProductName - $@product.ProductPrice
+                <button class="add-to-cart" data-id="@product.ProductId">Add to Cart</button>
+            </li>
+        }
+    </ul>*@
+
+@*<div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+        </ul>
+    </div>*@
+
+<script>
+
+
+    //document.addEventListener("DOMContentLoaded", function () {
+    //    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+    //    const cartItems = document.getElementById("cart-items");
+
+    //    addToCartButtons.forEach(button => {
+    //        button.addEventListener("click", function () {
+    //            const productId = this.getAttribute("data-id");
+    //            addToCart(productId);
+    //        });
+    //    });
+
+    //    function addToCart(productId) {
+    //        fetch(`/Main/AddToCart?productId=${productId}`, { method: "POST" })
+    //            .then(response => response.json())
+    //            .then(cart => updateCartUI(cart));
+    //    }
+
+    //    function updateCartUI(cart) {
+    //        cartItems.innerHTML = "";
+
+    //        cart.forEach(item => {
+    //            const li = document.createElement("li");
+    //            li.textContent = `${item.productName} - Quantity: ${item.quantity}`;
+    //            cartItems.appendChild(li);
+    //        });
+    //    }
+    //});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //window risize
+    window.onresize = function () {
+        location.reload();
+    }
+
+    //owl carousel
+    $(".carousel").owlCarousel({
+        margin: 0,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 3,
+                nav: true
+            },
+            600: {
+                items: 4,
+                nav: true
+            },
+            700: {
+                items: 5,
+                nav: true
+            },
+            1000: {
+                items: 5,
+                nav: true
+            }
+        }
+    });
+
+
+
+    //sheo color change
+    let sheo = document.querySelector('#sheochange');
+
+    //active
+    const sheos = document.querySelectorAll(".sheos");
+
+
+    function sheoColorChange(img, num) {
+        sheo.src = img;
+
+        var current = document.getElementsByClassName('sheoActive');
+
+        current[0].className = current[0].className.replace(" sheoActive", "");
+
+        sheos[num].className += " sheoActive";
+
+    }
+
+
+
+
+
+    //bracelet color change
+    let bracelet = document.querySelector('#bracelet');
+
+    //active
+    const bracelets = document.querySelectorAll(".bracelets");
+
+
+    function braceletColorChange(img, index) {
+        bracelet.src = img;
+
+        var braceletActive = document.getElementsByClassName('braceletActive');
+
+        braceletActive[0].className = braceletActive[0].className.replace("braceletActive", "");
+
+        bracelets[index].className += " braceletActive";
+
+    }
+
+
+    //bag color change
+    let bag = document.querySelector('#bag');
+
+    //active
+    const bags = document.querySelectorAll(".bag");
+
+    function bagColorChange(img, index) {
+        bag.src = img;
+
+        var bagActive = document.getElementsByClassName('bagActive');
+
+        bagActive[0].className = bagActive[0].className.replace("bagActive", "");
+
+        bags[index].className += " bagActive";
+
+    }
+
+
+
+    //menu bar
+
+    let menu = document.querySelector('.fa-bars');
+    let menubar = document.querySelector('.menu-bar');
+    let a = true;
+    menu.addEventListener("click", () => {
+
+        if (a == true) {
+            menubar.style.height = "180px";
+            menu.classList.replace("fa-bars", "fa-remove");
+            a = false;
+        } else {
+            menubar.style.height = "0px";
+            menu.classList.replace("fa-remove", "fa-bars");
+            a = true;
+        }
+
+    });
+
+    //side menu bar
+    let menubarside = document.querySelector('.menu-bar-side');
+    let b = true;
+    menubarside.addEventListener("click", () => {
+
+        if (b == true) {
+            menubarside.style.left = "0%";
+            b = false;
+        } else {
+            menubarside.style.left = "-162px";
+            b = true;
+        }
+
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
