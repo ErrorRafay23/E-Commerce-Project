@@ -1,11 +1,22 @@
 global using E_Commerce_Project.Models;
 global using E_Commerce_Project.Controllers;
+global using DataAccess.Models;
+global using DataAccess.Interface;
+
+using Microsoft.EntityFrameworkCore;
+using DataAccess;
+using BusinessLogic.Interface;
+using BusinessLogic;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ECommerceProjectContext>();
+builder.Services.AddDbContext<ECommerceProjectContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IProductRepository, ProductDA>();
+builder.Services.AddScoped<IProductRepositoryBL, ProductBL>();
+
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();

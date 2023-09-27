@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace E_Commerce_Project.Models;
+namespace DataAccess.Models;
 
 public partial class ECommerceProjectContext : DbContext
 {
     public ECommerceProjectContext()
     {
+
     }
 
-    public ECommerceProjectContext(DbContextOptions<ECommerceProjectContext> options)
-        : base(options)
+    public ECommerceProjectContext(DbContextOptions<ECommerceProjectContext> options) : base(options)
     {
+
     }
 
     public virtual DbSet<Category> Categories { get; set; }
@@ -30,8 +31,13 @@ public partial class ECommerceProjectContext : DbContext
     public virtual DbSet<Product> Products { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-2SEFI52\\SQLEXPRESS;Initial Catalog=E_Commerce_Project;Integrated Security=True;Trusted_Connection=True; TrustServerCertificate=True");
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+
+        }
+    }
+  //      => optionsBuilder.UseSqlServer();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

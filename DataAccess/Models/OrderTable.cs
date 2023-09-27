@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace E_Commerce_Project.Models;
+namespace DataAccess.Models;
 
 public partial class OrderTable
 {

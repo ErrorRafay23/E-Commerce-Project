@@ -1,4 +1,4 @@
-﻿@model IEnumerable<E_Commerce_Project.Models.Product>
+﻿@*@model IEnumerable<E_Commerce_Project.Models.Product>*@
 
 
 @{
@@ -76,28 +76,28 @@
         <h2>Featured Products</h2>
 
 
-        @foreach (var item in Model)
+        <!--foreach (var item in Model)
         {
             <div class="product">
                 <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-400x400.jpg" class="product-photo">
 
-                @*<i class="fa fa-shopping-basket basket add-to-cart" data-id="@item.ProductId"></i>*@
+                <i class="fa fa-shopping-basket basket add-to-cart" data-id="item.ProductId"></i>
 
 
-                <a class="add-to-cart" data-id="@item.ProductId"> <i class="fa fa-shopping-basket basket"></i></a>
+                <!--<a class="add-to-cart" data-id="item.ProductId"> <i class="fa fa-shopping-basket basket"></i></a>
 
                 <p class="sale">Sale!</p>
 
                 <div class="product-content">
                     <p class="name">
-                        @item.ProductName
+                        item.ProductName
                     </p>
                     <p class="category">
-                        @item.ProductCategory
+                        item.ProductCategory
                     </p>
                     <p class="price">
                         <span>&#36;150.00</span>
-                        &#36;  @item.ProductPrice
+                        &#36;  item.ProductPrice
                     </p>
                     <p class="stars">
                         <i class="fa fa-star-o"></i>
@@ -109,7 +109,7 @@
                     </p>
                 </div>
             </div>
-        }
+        }-->
 
 
 
